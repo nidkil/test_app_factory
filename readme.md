@@ -23,10 +23,10 @@ Getting the factory pattern to work isn't hard. Getting it to work correctly, it
 The problem I had was caused in the testing code. In the following section I will briefly explain how to setup
 and use the factory pattern correctly. 
 
-## The lesson learnt
+## Lessons learned
 
-I have added more code than strictly necessary to show the concept of the factory pattern working, just to provide
-a more realistic example.
+I have added more code than strictly necessary to show the concept of the factory pattern working as a realistic 
+example.
 
 The structure and contents of this example project is:
 
@@ -60,7 +60,7 @@ The structure and contents of this example project is:
     
 ```
 
-Okay, what's important tot point out here?
+Okay, what's important to point out here?
 
 The core of the factory pattern is setup in `application.py` and `extensions.py`. All extensions are initialized 
 in `extensions.py`. If you add additional extensions make sure to add them to the import statement in 
@@ -97,7 +97,7 @@ by Flask:
 ```
 
 Now for the part that was driving met crazy, the testing code. I still do not understand fully why it is the 
-only place in my code that was causing a problem, probably has to do with the way unittest works. Anyway, to 
+only place in my code that was causing a problem, probably has to do with the way `cunittest` works. Anyway, to 
 get the factory pattern to work you need to add `app_context` to specific statements. Here is an example. 
 
 ```
