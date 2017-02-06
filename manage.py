@@ -10,9 +10,9 @@ import unittest
 
 from flask_script import Manager, Server, Shell
 
-from test_factory import app_factory, db
-from test_factory.models import User
-from test_factory.helpers.misc import pretty_print_config
+from test_app_factory import app_factory, db
+from test_app_factory.models import User
+from test_app_factory.helpers.misc import pretty_print_config
 
 use_config = os.getenv('TEST_FACTORY_CONFIG', 'TST')
 

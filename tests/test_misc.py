@@ -6,7 +6,7 @@ import tempfile
 import unittest
 
 from flask import Flask
-from test_factory.helpers.misc import create_path, pretty_print_config, get_root_path, OUTPUT_LIST, OUTPUT_STRING
+from test_app_factory.helpers.misc import create_path, pretty_print_config, get_root_path, OUTPUT_LIST, OUTPUT_STRING
 
 
 def get_test_path_1():

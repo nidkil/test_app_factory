@@ -13,9 +13,9 @@ from .helpers.misc import get_root_path
 
 # Simplify the loading of configurations.
 CONFIG_NAME_MAPPER = {
-    'DEV': 'test_factory.config.DevelopmentConfig',
-    'TST': 'test_factory.config.TestingConfig',
-    'PRD': 'test_factory.config.ProductionConfig'
+    'DEV': 'test_app_factory.config.DevelopmentConfig',
+    'TST': 'test_app_factory.config.TestingConfig',
+    'PRD': 'test_app_factory.config.ProductionConfig'
 }
 
 

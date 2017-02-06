@@ -1,7 +1,7 @@
 """
 A very basic model for testing purposes.
 """
-from test_factory.extensions import db
+from test_app_factory.extensions import db
 
 
 class User(db.Model):

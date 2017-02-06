@@ -38,7 +38,7 @@ The structure and contents of this example project is:
     │   requirements.txt
     ├── instance
     │   flask.cfg
-    ├── example_factory_app
+    ├── test_app_factory
     │   │   __init__.py
     │   │   appliction.py
     │   │   config.py
@@ -64,7 +64,7 @@ Okay, what's important tot point out here?
 
 The core of the factory pattern is setup in `application.py` and `extensions.py`. All extensions are initialized 
 in `extensions.py`. If you add additional extensions make sure to add them to the import statement in 
-`example_factory_app/__init__.py`. This is a convent way to shorten import statements.
+`test_app_factory/__init__.py`. This is a convent way to shorten import statements.
 
 The actual heavy lifting is done in `application.py`. Each part of the application initialization is a separate
 function, which are called by the main function `app_factory`. This function takes a string, which specifies the

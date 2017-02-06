@@ -7,12 +7,13 @@ from flask import Flask
 
 from .config import CONFIG_NAME_MAPPER
 from .extensions import db
-from .helpers.misc import get_root_path, create_path
+from .helpers.misc import create_path
 
 # Some convenience constants referencing different project folders
-_ROOT_FOLDER = get_root_path(os.path.dirname(os.path.abspath(__file__)))
+_CUR_FOLDER = os.path.dirname(os.path.abspath(__file__))
+_ROOT_FOLDER = os.path.dirname(_CUR_FOLDER)
 _INSTANCE_FOLDER = os.path.join(_ROOT_FOLDER, 'instance')
-_TEMPLATE_FOLDER = os.path.join(_ROOT_FOLDER, 'templates')
+_TEMPLATE_FOLDER = os.path.join(_CUR_FOLDER, 'templates')
 _TMP_FOLDER = os.path.join(_ROOT_FOLDER, 'tmp')
 
 
@@ -39,6 +40,7 @@ def app_factory(config_env='PRD', app_name=__name__):
                 instance_relative_config=True)
 
     config_app(app, config_env)
+    config_init(app)
     config_extensions(app)
     config_blueprints(app)
     configure_error_handlers(app)
@@ -48,7 +50,7 @@ def app_factory(config_env='PRD', app_name=__name__):
     return app
 
 
-def init():
+def config_init(app):
     """
     Any initializing that needs to be done is handled here.
     """
@@ -109,7 +111,7 @@ def config_blueprints(app):
     app: flask application instance
         The Flask application instance.
     """
-    from test_factory.module.views import tests_blueprint
+    from test_app_factory.module.views import tests_blueprint
     app.register_blueprint(tests_blueprint)
 
 

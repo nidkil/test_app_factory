@@ -10,8 +10,8 @@ Add app_context before database statements.
 import unittest
 
 from flask import current_app as app
-from test_factory import app_factory, db
-from test_factory.models import User
+from test_app_factory import app_factory, db
+from test_app_factory.models import User
 
 
 class TestModel(unittest.TestCase):
