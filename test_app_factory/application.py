@@ -64,13 +64,13 @@ def config_app(app, config_env):
     Load configuration settings from different configuration locations. Variables defined in each consecutive
     configuration file overrides those in the configuration files loaded earlier.
 
-    Configuration variables tha contain sensitive information should be placed in the configuration file(flask.cfg)
+    Configuration variables tha contain sensitive information should be placed in the configuration file(sensitive.cfg)
     in the instance folder or any location on the OS that is made available by the TEST_FACTORY_APP_CONFIG environment
     variable to the location.
 
     Configuration locations are:
     1. Environment specific configuration class.
-    2. Optionally the flask.cfg conffiguration file in the instance folder.
+    2. Optionally the sensitive.cfg conffiguration file in the instance folder.
     3. Optionally a configuration file reference by the TEST_FACTORY_CONFIG_FILE environment variable.
 
     Parameters
@@ -84,7 +84,7 @@ def config_app(app, config_env):
     # Load the environment specific configuration class
     app.config.from_object(CONFIG_NAME_MAPPER[config_env])
     # If the configuration file exists in the instance folder load it
-    app.config.from_pyfile('flask.cfg', silent=True)
+    app.config.from_pyfile('sensitive.cfg', silent=True)
     # If the TEST_FACTORY_CONFIG_FILE environment variable exists and the file exist load it
     app.config.from_envvar('TEST_FACTORY_APP_CONFIG', silent=True)
 
