@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Mac custom attributes file (Desktop Service Store)
+.DS_Store
+
+# PyCharm files
+.idea/
+
+# Instance Folder - used for configuration parameters
+# --- Disabled ignoring the instande folder for this example project.
+#     WARNING: Must be enabled for a normal project. ---
+#/instance
+# WARNING: Added explicitly for this example project. Remove for a normal project.
+*.sqlite
