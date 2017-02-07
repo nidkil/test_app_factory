@@ -2,9 +2,10 @@
 A very basic model for testing purposes.
 """
 from test_app_factory.extensions import db
+from test_app_factory.helpers.db_utils import CRUDMixin
 
 
-class User(db.Model):
+class User(CRUDMixin, db.Model):
     __tablename__ = 'tbl_users'
 
     id = db.Column(db.Integer, primary_key=True)
