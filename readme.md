@@ -37,7 +37,7 @@ The structure and contents of this example project is:
     │   manage.py
     │   requirements.txt
     ├── instance
-    │   flask.cfg
+    │   sensitive.cfg
     ├── test_app_factory
     │   │   __init__.py
     │   │   appliction.py
